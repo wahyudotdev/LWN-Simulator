@@ -15,21 +15,21 @@ type As923 struct {
 	Info models.Parameters
 }
 
-//manca un setup
+// manca un setup
 func (as *As923) Setup() {
 	as.Info.Code = Code_As923
-	as.Info.MinFrequency = 923000000
-	as.Info.MaxFrequency = 923500000
-	as.Info.FrequencyRX2 = 923200000
-	as.Info.DataRateRX2 = 2
+	as.Info.MinFrequency = 921200000
+	as.Info.MaxFrequency = 922600000
+	as.Info.FrequencyRX2 = 921400000
+	as.Info.DataRateRX2 = 0
 	as.Info.MinDataRate = 0
-	as.Info.MaxDataRate = 7
+	as.Info.MaxDataRate = 5
 	as.Info.MinRX1DROffset = 0
-	as.Info.MaxRX1DROffset = 7
+	as.Info.MaxRX1DROffset = 5
 	as.Info.InfoGroupChannels = []models.InfoGroupChannels{
 		{
 			EnableUplink:       true,
-			InitialFrequency:   923200000,
+			InitialFrequency:   921400000,
 			OffsetFrequency:    200000,
 			MinDataRate:        0,
 			MaxDataRate:        5,

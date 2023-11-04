@@ -2,11 +2,11 @@ package device
 
 import (
 	"encoding/binary"
+	up "github.com/arslab/lwnsimulator/simulator/components/device/frames/uplink"
+	"log"
 	"time"
 
 	"github.com/arslab/lwnsimulator/simulator/components/device/classes"
-	up "github.com/arslab/lwnsimulator/simulator/components/device/frames/uplink"
-
 	"github.com/arslab/lwnsimulator/simulator/util"
 	"github.com/brocaar/lorawan"
 )
@@ -65,9 +65,12 @@ func (d *Device) CreateUplink() [][]byte {
 	m, n := d.Info.Configuration.Region.GetPayloadSize(d.Info.Status.DataRate, d.Info.Status.DataUplink.DwellTime)
 
 	if d.Info.Configuration.SupportedFragment { //frammentazione
-
+		s, err := payload.MarshalBinary()
+		if err != nil {
+			log.Println(err)
+		}
 		if len(d.Info.Status.DataUplink.FOpts) > 0 {
-			DataPayload = up.Fragmentation(n, payload)
+			DataPayload = up.Fragmentation(len(s), payload)
 		} else {
 			DataPayload = up.Fragmentation(m, payload)
 		}
@@ -82,6 +85,15 @@ func (d *Device) CreateUplink() [][]byte {
 
 	}
 
+	b, err := payload.MarshalBinary()
+	if err != nil {
+		log.Println(err)
+	}
+	DataPayload = []lorawan.DataPayload{
+		{
+			Bytes: b,
+		},
+	}
 	for i := 0; i < len(DataPayload); i++ {
 
 		alignedPayload := DataPayload[i]

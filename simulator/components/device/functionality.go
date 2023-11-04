@@ -40,9 +40,9 @@ func (d *Device) Execute() {
 	err = nil
 	downlink = nil
 
-	if d.Info.Status.DoSwitchChannel {
-		d.SwitchChannel()
-	}
+	//if d.Info.Status.DoSwitchChannel {
+	//	d.SwitchChannel()
+	//}
 
 	uplinks := d.CreateUplink()
 	for i := 0; i < len(uplinks); i++ {

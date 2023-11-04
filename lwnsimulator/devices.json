@@ -1,0 +1,74 @@
+{
+  "0": {
+    "id": 0,
+    "info": {
+      "devEUI": "db7361f070581139",
+      "devAddr": "00000000",
+      "nwkSKey": "00000000000000000000000000000000",
+      "appSKey": "00000000000000000000000000000000",
+      "appKey": "fb4d3005e349819d0d2c6aa3025cbad5",
+      "name": "db7361f070581139",
+      "status": {
+        "mtype": "ConfirmedDataUp",
+        "payload": "EWVFvkIA6HVHlgABxYgAAAILAAOFqgRLA4heAAAAE4cj4AE=",
+        "active": true,
+        "infoUplink": {
+          "fport": 11,
+          "fcnt": 1
+        },
+        "fcntDown": 0,
+        "base64": true,
+        "aligncurrentTime": false
+      },
+      "configuration": {
+        "region": 7,
+        "sendInterval": 10,
+        "ackTimeout": 2,
+        "range": 10000,
+        "disableFCntDown": true,
+        "supportedOtaa": true,
+        "supportedADR": false,
+        "supportedFragment": true,
+        "supportedClassB": false,
+        "supportedClassC": false,
+        "dataRate": 0,
+        "rx1DROffset": 0,
+        "nbRetransmission": 0,
+        "rssi": 0
+      },
+      "location": {
+        "latitude": -6.88641,
+        "longitude": 107.631289,
+        "altitude": 500
+      },
+      "rxs": [
+        {
+          "delay": 1000,
+          "durationOpen": 3000,
+          "channel": {
+            "active": false,
+            "enableUplink": true,
+            "freqUplink": 921200000,
+            "freqDownlink": 921400000,
+            "minDR": 0,
+            "maxDR": 5
+          },
+          "dataRate": 0
+        },
+        {
+          "delay": 1000,
+          "durationOpen": 3,
+          "channel": {
+            "active": true,
+            "enableUplink": false,
+            "freqUplink": 0,
+            "freqDownlink": 0,
+            "minDR": 0,
+            "maxDR": 0
+          },
+          "dataRate": 0
+        }
+      ]
+    }
+  }
+}

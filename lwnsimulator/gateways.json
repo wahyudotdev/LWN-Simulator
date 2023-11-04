@@ -1,0 +1,19 @@
+{
+	"3": {
+		"id": 3,
+		"info": {
+			"macAddress": "0856d4c3ee3f5f8d",
+			"keepAlive": 30,
+			"active": true,
+			"typeGateway": false,
+			"name": "0856d4c3ee3f5f8d",
+			"location": {
+				"latitude": -6.88641,
+				"longitude": 107.631289,
+				"altitude": 500
+			},
+			"ip": "",
+			"port": ""
+		}
+	}
+}
